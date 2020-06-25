@@ -1,0 +1,69 @@
+@keyframes anim{
+  from{transform: rotateX(0deg) rotateY(0deg)}
+  to{transform: rotateX(120deg) rotateY(180deg)}
+}
+
+#cube{
+    width: 100px;
+    height: 100px;
+    margin: 100px 200px;
+    animation: anim 3s alternate infinite;
+    transform-style: preserve-3d;
+    position: relative;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 90px;
+
+    transform-origin: 50px 50px -50px;
+
+
+    /*transform: rotateX(0deg) rotateY(180deg);*/
+}
+    #cube > div{
+        width: 100px;
+        height: 100px;
+        
+        position: absolute;
+        backface-visibility: visible;
+
+    }
+    .left{
+        background: blue;
+        top: 0px;
+        left: -100px;
+        transform: rotateY(-90deg);
+        transform-origin: right;
+    }
+    .right{
+        background: green;
+        top: 0px;
+        left: 100px;
+        transform: rotateY(90deg);
+        transform-origin: left;
+    }
+    .center{
+        background: red;
+        top: 0px;
+        left: 0px;
+    }
+    .top{
+        background: orange;
+        top: -100px;
+        left: 0px;
+        transform: rotateX(90deg);
+        transform-origin: bottom;
+    }
+    .bottom{
+        background: yellow;
+        top: 100px;
+        left: 0px;
+        transform: rotateX(-90deg);
+        transform-origin: top;
+    }
+    .bum{
+        background: lime;
+        transform: translateZ(-100px) rotateY(180deg);
+    }
+
+    
